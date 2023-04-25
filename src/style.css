@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+    --white: #ffffff;
+    --white-2: #f5f5f5;
+    --dark-blue: #030e4d;
+    --blue: #0851be;
+    --gray: #949494;
+    --background: #040924;
+    --sidebar: #07032f;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: var(--background);
+    height: 100%;
+}
+
+button {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.start {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.start img {
+    width: 100px;
+    height: 100px;
+    margin-top: 12rem;
+    margin-bottom: 2rem;
+}
+
+.start h1 {
+    color: var(--white-2);
+    text-transform: capitalize;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.start p {
+    color: var(--gray);
+    font-size: 1.8rem;
+    line-height:  1.5;
+    margin-bottom: 3rem;
+}
+
+.start-btn {
+  font-size: 16px;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(45deg, var(--dark-blue), var(--blue));
+  padding: 1rem 2rem;
+  width: 35%;
+  border-radius: .5rem;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: white;
+}
+
+.start-btn:hover {
+    background-image: linear-gradient(45deg, var(--blue), var(--dark-blue));
+}
+
+.sidebar {
+    padding: 2rem;
+    width: 30%;
+    height: 120vh;
+    background: var(--sidebar);
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-input {
+    padding: 1rem;
+    outline: none;
+    width: 80%;
+}
+
+.search-btn {
+    background: var(--white);
+    border-radius: 50%;
+    padding: .4rem .7rem;
+    color: var(--dark-blue);
+}
+
+.sidebar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--white-2);
+}
+
+.sidebar-img {
+    margin-top: 3rem;
+    width: 100px;
+    height: 100px;
+}
+
+.sidebar-content h1 {
+    font-size: 10rem;
+    margin: 1rem 0;
+}
+
+.sidebar-content h2 {
+    font-size: 4rem;
+}
+
+.date {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+.time {
+    font-size: 2rem;
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.location p {
+    font-size: 1.5rem;
+    margin-left: .5rem;
+    text-transform: capitalize;
+}
+
+.weather {
+    margin-left: 30%;
+    width: 70%;
+    padding: 0rem 2rem;
+    position: absolute;
+    top: 0;
+    color: var(--white-2);
+}
+
+.highlight {
+    margin: 2rem 0 0 3.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.highlight-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.highlight-info {
+    background: var(--sidebar);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.highlight-info h2 , .highlight-info p{
+    font-size: 2rem;
+}
+
+.highlight-info img {
+    margin: 2rem 0;
+    width: 75px;
+    height: 75px;
+}
+
+
+@media (max-width: 1024px) {
+    .sidebar-content h1 {
+        font-size: 7rem;
+    }
+    .sidebar-content h2 {
+        font-size: 3rem;
+    }
+    .highlight {
+        margin:2rem 0 0 2.5rem;
+    }
+    .highlight-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .search-btn {
+        margin-left: 1rem;
+    }
+    .sidebar-content h1 {
+        font-size: 5rem;
+    }
+    .sidebar-content h2 {
+        font-size: 2rem;
+    }
+    .location p {
+        font-size:  1rem;
+    }
+    .highlight {
+        margin:2rem 0 0 2.5rem;
+    }
+    .highlight h1 {
+        font-size: 2.2rem;
+    }
+    .highlight-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .highlight-info h1, .highlight-info p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .start img {
+        margin-top: 7rem;
+    }
+    .start h1 {
+        font-size: 1.5rem;
+    }
+    .start p {
+        font-size: 1rem;
+    }
+    .start-btn {
+        width: 35%;
+        font-size: 1.2rem;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .sidebar-img {
+        margin-top: 1.5rem;
+    }
+    .sidebar h1 {
+        font-size: 8rem;
+        margin:  0 0 .5rem;
+    }
+    .sidebar h2 {
+        font-size: 3rem;
+    }
+    .date {
+        font-size: 2rem;
+    }
+    .location {
+        margin-top: 2rem;
+    }
+    .location p {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    .weather {
+        width: 100%;
+        margin-left: 0%;
+        position: absolute;
+        top: 100%;
+    }
+    .highlight {
+        margin: 2rem;
+    }
+    .highlight-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .sidebar {
+        height: 80vh;
+    }
+    .highlight-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .sidebar {
+        height: 72vh;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        height: 68vh;
+    }
+    .highlight-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media (max-width: 375px) {
+    .sidebar {
+        height: 60vh;
+    }
+    .sidebar h1 {
+        font-size: 7rem;
+    }
+    .sidebar h2 {
+        font-size: 2.5rem;
+    }
+    .date, .time {
+        font-size: 1.5rem;
+    }
+    .location p {
+        font-size: 1.5rem;
+    }
+    .highlight-content {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 280px) {
+    .sidebar {
+        height: 70vh;
+    }
+}
