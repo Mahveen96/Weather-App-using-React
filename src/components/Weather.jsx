@@ -1,5 +1,5 @@
 import React from 'react'
-import wind from 'Weather-App-using-React/public/assets/wind.png'
+import wind from '../assets/wind.png'
 import air from '../assets/windy.png'
 import humidity from '../assets/humidity.png'
 import visibility from '../assets/visibility.png'
